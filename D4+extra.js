@@ -146,8 +146,7 @@ console.log("Tutte le prime Maiuscole:",upperFirst(es8));
 /* SCRIVI QUI LA TUA RISPOSTA */
 function cutString(string)
 {
-    string=string.slice(1,string.length-1);
-    return string;
+    return string.slice(1,string.length-1);
 }
 let es9="ABCDE";
 console.log("Tolgo prima e ultima lettera:",cutString(es9));
