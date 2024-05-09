@@ -124,19 +124,19 @@ console.log(es7, "Inverso:", reverseString(es7));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function upperFirst(string){
-    let splitted=string.split(" ");
-    console.log("s", splitted);
-    console.log(splitted.length);
-    for(let i=0;i<splitted.length;i++){
-        //console.log("sono dentro");
-        splitted[i]= splitted[i][0].toUpperCase()+splitted[i].substr(1);
-        console.log(splitted[i]);
-    }
-    return splitted.join(" ");
+function upperFirst(string) {
+  let splitted = string.split(" ");
+  console.log("s", splitted);
+  console.log(splitted.length);
+  for (let i = 0; i < splitted.length; i++) {
+    //console.log("sono dentro");
+    splitted[i] = splitted[i][0].toUpperCase() + splitted[i].substr(1);
+    console.log(splitted[i]);
+  }
+  return splitted.join(" ");
 }
-let es8= "mi piace il gelato al cioccolato"
-console.log("Tutte le prime Maiuscole:",upperFirst(es8));
+let es8 = "mi piace il gelato al cioccolato";
+console.log("Tutte le prime Maiuscole:", upperFirst(es8));
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
@@ -144,29 +144,26 @@ console.log("Tutte le prime Maiuscole:",upperFirst(es8));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function cutString(string)
-{
-    return string.slice(1,string.length-1);
+function cutString(string) {
+  return string.slice(1, string.length - 1);
 }
-let es9="ABCDE";
-console.log("Tolgo prima e ultima lettera:",cutString(es9));
-
+let es9 = "ABCDE";
+console.log("Tolgo prima e ultima lettera:", cutString(es9));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function giveMeRandom(n){
-    let numbers=[];
-    for(let i=0;i<n;i++)
-    {
-        numbers.push(Math.floor(Math.random() * 10)+1);
-    }
-    return numbers;
+function giveMeRandom(n) {
+  let numbers = [];
+  for (let i = 0; i < n; i++) {
+    numbers.push(Math.floor(Math.random() * 10) + 1);
+  }
+  return numbers;
 }
-let es10=7;
-console.log("Numeri a caso:",giveMeRandom(es10));
+let es10 = 7;
+console.log("Numeri a caso:", giveMeRandom(es10));
 
 //---------------------------------------------EXTRA-------------------------------------
 // Esercizi aggiuntivi (facoltativi) per D4
