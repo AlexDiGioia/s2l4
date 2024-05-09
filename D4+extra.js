@@ -58,7 +58,7 @@ console.log("Crazy Diff:", result);
   return false;
 }*/
 function boundary(n) {
-  return (n >= 20 && n <= 100) || n === 400;  
+  return (n >= 20 && n <= 100) || n === 400;
 }
 result = boundary(400);
 console.log("Boundary:", result);
@@ -77,8 +77,8 @@ function epify(string) {
   }
   return "EPICODE " + string;
 }
-let stringEs5="Spupazziamoci"
-console.log("Epify:",epify(stringEs5));
+let stringEs5 = "Spupazziamoci";
+console.log("Epify:", epify(stringEs5));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -86,24 +86,22 @@ console.log("Epify:",epify(stringEs5));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-function check3and7(n){
-    if(n<0||typeof n!=="number")
-        return -1;
-    if (n%3===0||n%7===0)
-        return 1;
-    return 0;
+function check3and7(n) {
+  if (n < 0 || typeof n !== "number") return -1;
+  if (n % 3 === 0 || n % 7 === 0) return 1;
+  return 0;
 }
-let n=12;
-let es6=check3and7(n)
-switch(es6){
-    case -1:
-        console.log("Errore, inserisci un numero positivo");
-        break;
-    case 0:
-        console.log(n,": Numero non divisibile per 3 o per 7");
-        break;
-    case 1:
-        console.log(n,": Numero divisibile per 3 o per 7")
+let n = 12;
+let es6 = check3and7(n);
+switch (es6) {
+  case -1:
+    console.log("Errore, inserisci un numero positivo");
+    break;
+  case 0:
+    console.log(n, ": Numero non divisibile per 3 o per 7");
+    break;
+  case 1:
+    console.log(n, ": Numero divisibile per 3 o per 7");
 }
 
 /* ESERCIZIO 7
@@ -111,6 +109,14 @@ switch(es6){
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function reverseString(string) {
+  let splitted = string.split(""); //["E","P","I","C","O","D","E"]
+  let reversedArray = splitted.reverse(); //["E","D","O","C","I","P","E"]
+  let reversedJoyned = reversedArray.join(""); // "EDOCIPE"
+  return reversedJoyned;
+}
+let es7 = "EPICODE";
+console.log(es7, "Inverso:", reverseString(es7));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -118,6 +124,19 @@ switch(es6){
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function upperFirst(string){
+    let splitted=string.split(" ");
+    console.log("s", splitted);
+    console.log(splitted.length);
+    for(let i=0;i<splitted.length;i++){
+        //console.log("sono dentro");
+        splitted[i]= splitted[i][0].toUpperCase()+splitted[i].substr(1);
+        console.log(splitted[i]);
+    }
+    return splitted.join(" ");
+}
+let es8= "mi piace il gelato al cioccolato"
+console.log("Tutte le prime Maiuscole:",upperFirst(es8));
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
@@ -125,12 +144,30 @@ switch(es6){
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function cutString(string)
+{
+    string=string.slice(1,string.length-1);
+    return string;
+}
+let es9="ABCDE";
+console.log("Tolgo prima e ultima lettera:",cutString(es9));
+
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom(n){
+    let numbers=[];
+    for(let i=0;i<n;i++)
+    {
+        numbers.push(Math.floor(Math.random() * 10)+1);
+    }
+    return numbers;
+}
+let es10=7;
+console.log("Numeri a caso:",giveMeRandom(es10));
 
 //---------------------------------------------EXTRA-------------------------------------
 // Esercizi aggiuntivi (facoltativi) per D4
