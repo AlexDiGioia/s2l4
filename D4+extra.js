@@ -72,12 +72,12 @@ console.log("Boundary:", result);
 /* SCRIVI QUI LA TUA RISPOSTA */
 function epify(string) {
   if (string.indexOf("EPICODE") === 0) {
-    console.log("sas");
+    //console.log("sas");
     return string;
   }
   return "EPICODE " + string;
 }
-let stringEs5 = "Spupazziamoci";
+let stringEs5 = "CIAO";
 console.log("Epify:", epify(stringEs5));
 
 /* ESERCIZIO 6
@@ -98,10 +98,10 @@ switch (es6) {
     console.log("Errore, inserisci un numero positivo");
     break;
   case 0:
-    console.log(n, ": Numero non divisibile per 3 o per 7");
+    console.log("Numero non divisibile per 3 o per 7");
     break;
   case 1:
-    console.log(n, ": Numero divisibile per 3 o per 7");
+    console.log("Numero divisibile per 3 o per 7");
 }
 
 /* ESERCIZIO 7
@@ -126,16 +126,14 @@ console.log(es7, "Inverso:", reverseString(es7));
 /* SCRIVI QUI LA TUA RISPOSTA */
 function upperFirst(string) {
   let splitted = string.split(" ");
-  console.log("s", splitted);
-  console.log(splitted.length);
+  console.log("splitted", splitted);
   for (let i = 0; i < splitted.length; i++) {
-    //console.log("sono dentro");
     splitted[i] = splitted[i][0].toUpperCase() + splitted[i].substr(1);
-    console.log(splitted[i]);
+    //console.log(splitted[i]);
   }
   return splitted.join(" ");
 }
-let es8 = "mi piace il gelato al cioccolato";
+let es8 = "gelato al cioccolato";
 console.log("Tutte le prime Maiuscole:", upperFirst(es8));
 
 /* ESERCIZIO 9
@@ -158,7 +156,7 @@ console.log("Tolgo prima e ultima lettera:", cutString(es9));
 function giveMeRandom(n) {
   let numbers = [];
   for (let i = 0; i < n; i++) {
-    numbers.push(Math.floor(Math.random() * 10) + 1);
+    numbers.push(Math.floor(Math.random() * 11) );
   }
   return numbers;
 }
